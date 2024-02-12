@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#dashboard{
+    background: rgb(253, 247, 253);
+    border: 0.5px solid  rgb(159, 106, 211);
+    opacity: 0.8;
+    
+}
+body{
+    background-color:rgb(231, 227, 236);
+    
+}
+#slidebar{
+    position:sticky;
+    background-color:rgb(166, 130, 200);
+    height: 100vh;
+    width:63px;
+    overflow: hidden;
+    transition: .5s;
+    border: solid black;
+}
+
+#slidebar:hover{
+    width: 310px;
+    transition: 0.5s;
+    
+}
+.staff{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 40px;
+    cursor:default;
+}
+.staffimg{
+    height: 50px;
+    width: 50px;
+   margin: 2px;
+   /* border-radius: 50px;
+    border-style:solid;
+    border-color: white;*/
+    padding: 3px;
+    cursor:default;
+}
+.staff span{
+    
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    padding-left: 30px;
+
+    font-size: 25px;
+}
+#logoutitem{
+    position: absolute;
+    bottom: 0%;
+}
+li a{
+    text-decoration: none;
+    color: rgb(238, 234, 234);
+}
+li{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
+    
+}
+img{
+    height: 40px;
+    width: 40px;
+    margin:10px;
+
+    
+}
+
+.staffitem{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+    
+   
+}
+.staffitem span{
+    color:rgb(10, 10, 10);
+    padding-left: 5px;
+    
+}
+.staffitem span:hover{
+    color: rgb(64, 4, 109);
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+a{
+    width: 100%;
+}
+
+
+.staffitem::before{
+    content: '';
+    margin-left: 15px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 73%;
+    height: 3px;
+    background-color: rgb(25, 71, 234);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform.5s;
+
+}
+.staffitem:before::after{
+    transform:scaleX(1);
+transform-origin: left;
+}
+
+
+/*main section*/
+.container{
+    display: flex;
+}
+.main{
+    position: relative;
+   
+    width: 100%;
+    margin:0;
+   
+}
+.topheading{
+    display: flex;
+    width: 100%;
+    background:linear-gradient(220deg,rgba(243, 232, 232, 1),rgb(202, 148, 253),rgba(243, 232, 232, 1),rgb(202, 148, 253),rgba(243, 232, 232, 1));
+   
+    height: 50px;
+    align-items: center;
+   justify-content: space-between;
+   border: 2px solid rgb(18, 17, 17);
+   border-left: none;
+   cursor:default;
+}
+.main .topheading h1{
+    padding-left: 20px;
+}
+.myprofile{
+    background:white;
+    height: 30px;
+    
+    border-radius: 100px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 10px;
+    display: inline-flex; 
+    align-items: center;
+}
+.profileimg{
+   width: 25px; 
+   height: 25px;
+    margin-right: 5px;
+    margin-left: -2px;
+    
+}
+.myprofile:hover{
+    background: rgb(226, 233, 239);
+}
+ 
+.sub-menu-wrap{
+    position: absolute;
+    right:0%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    cursor:default;
+    
+}
+ .sub-menu-wrap.open-menu{
+    max-height: 400px;
+
+} 
+.sub-menu{
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    box-shadow:-3px -3px 7px grey,
+    3px 3px 5px black;
+    border-radius: 15px;
+}
+#name{
+    font-size: 25px;
+    text-align: center;
+}
+.sub-menu hr{
+    background: black;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0 10px;
+}
+
+
+#oneline{
+    padding: 4px;
+   
+}
+
+
+
+   

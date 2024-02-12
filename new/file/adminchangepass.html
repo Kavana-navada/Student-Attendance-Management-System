@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>changemypassword</title>
+        <link rel="stylesheet" type="text/css" href="changepasscss.css">
+        <script type="text/javascript"> 
+            function mycancel(){
+                window.location="adminlogin.html";
+            }
+
+
+            function passwordstrength(){
+                var npass=document.getElementById("newpass");               
+                var str=document.getElementById("strength");
+                
+                let alpha=/[a-zA-z]/;
+                let upper=/[A-Z]/;
+                let num=/[0-9]/;
+                let spcl=/[!,@,#,$,%,^,&,*,),(,?,~,_,+,{,|,-,=,},<,>,.]/;
+                
+                    
+                    if(npass.value.length<4)
+                    {
+                        str.innerHTML="password is weak";
+                        str.style.color="red";
+                        npass.setCustomValidity("password must contain 8 character");
+                        
+                    }
+                    else if(npass.value.length<8)
+                    {
+                        str.innerHTML="password is medium";
+                        str.style.color="yellow";
+                        npass.setCustomValidity("password must contain 8 character");
+                        if(!(npass.value.match(num)))
+                        {
+                            npass.setCustomValidity("must contain atleast one digit");
+                        }
+                        if(!(npass.value.match(spcl)))
+                        {
+                            npass.setCustomValidity("must contain atleast one special character");
+                        }
+                        if(!(npass.value.match(upper)))
+                        {
+                            npass.setCustomValidity("must contain atleast one uppercase charater");
+                        }
+                    }
+                    else if(npass.value.length>=8 &&  npass.value.match(alpha) &&  npass.value.match(upper) && npass.value.match(num)&& npass.value.match(spcl))
+                    {
+                        str.innerHTML="password is strong";
+                        str.style.color="green";
+                        
+                        npass.setCustomValidity("");
+                    }
+                    
+                }
+                function passcheck()
+                {
+                    var npass=document.getElementById("newpass");
+                    var cnpass=document.getElementById("confirmnewpass");
+                    if((npass.value)===(cnpass.value))
+                    {
+                        cnpass.setCustomValidity("");
+
+                    }
+                    else
+                    {
+                        cnpass.setCustomValidity("password mismatched");
+                    }
+                }
+        </script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        
+            <nav id="navigationbar">
+                <img src="Pictures/clglogo.jpg">  
+                
+                <ul>
+                    <li><span>Bhandakars' Arts and Science College</span></li>
+                               
+                </ul>                            
+            </nav>
+            <div class="leaf">
+            <div class="middle">    <!--login-box-->
+                <input type="button" value="x" id="cancelbutton" onclick="mycancel()"/>
+                <h2><b>Reset Password</b></h2>
+                    <form action="changepassphp.php" method="POST">
+
+                    <div class="input-box">
+                        <input type="number" id="code" name="code" maxlength="10" required>
+                        <label for="ACode">Admin Code</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="email" id="email" name="email" maxlength="30" required>
+                        <label for="email">Email Id</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password"  id="newpass" name="newpass" maxlength="15" oninput="passwordstrength()" required>
+                        <label for="newpassword">New Password</label>
+                        <span id="strength"></span>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password"  id="confirmnewpass" name="confirmnewpass" maxlength="15" oninput="passcheck()" required>
+                        <label for="newpassword">Confirm new Password</label>
+                    </div>
+
+                   <button  type="submit" class="btn" value="change" name="change">Change Password</button><br>
+                    </form>
+            </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

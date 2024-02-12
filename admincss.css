@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    font-family: sans-serif;
+}
+#dashboard{
+    background: #19bd60;
+    border: 0.5px solid  #156602;
+    opacity: 0.8;
+    
+}
+body{
+    background-color: rgb(201, 236, 245);
+    
+}
+#slidebar{
+    position:sticky;
+    background-color: rgb(45, 186, 183);
+    height: 100vh;
+    width:63px;
+    overflow: hidden;
+    transition: .5s;
+    border: solid black;
+}
+
+#slidebar:hover{
+    width: 310px;
+    transition: 0.5s;
+    
+}
+.admin{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 40px;
+    cursor:default;
+}
+.adminimg{
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+    padding: 3px;
+    cursor:default;
+   
+}
+.admin span{
+    
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    padding-left: 30px;
+    font-size: 25px;
+}
+#logoutitem{
+    position: absolute;
+    bottom: 0%;
+}
+li a{
+    text-decoration: none;
+    color: rgb(238, 234, 234);
+}
+li{
+    display: flex;
+    text-align: center;
+    align-items: center;   
+}
+img{
+    height: 40px;
+    width: 40px;
+    margin:10px;    
+}
+
+.adminitem{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;  
+}
+.adminitem span{
+    color:rgb(10, 10, 10);
+    padding-left: 5px;
+    
+}
+.adminitem span:hover{
+    color: rgb(8, 38, 134);
+    font-size: 18px;
+    font-weight: bold;
+    
+    
+}
+a{
+    width: 100%;
+}
+
+
+.adminitem::before{
+    content: '';
+    margin-left: 15px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 73%;
+    height: 3px;
+    background-color: rgb(25, 71, 234);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform.5s;
+    background-color: rgba(255,255,255,0.5);
+
+}
+.adminitem:before::after{
+    transform:scaleX(1);
+    transform-origin: left;
+    
+}
+
+
+/*main section*/
+.container{
+    display: flex;
+}
+.main{
+    position: relative;
+   
+    width: 100%;
+    margin:0;
+   
+}
+.topheading{
+    display: flex;
+    width:100%;
+    background-color: rgb(124, 203, 234);
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid rgb(18, 17, 17);
+    border-left: none;
+    cursor:default;  
+}
+.main .topheading h1{
+    padding-left: 20px;
+}
+
+.myprofile{
+    background:white;
+    height: 30px; 
+    border-radius: 100px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 10px;
+    display: inline-flex; 
+    align-items: center;
+}
+.profileimg{
+    width: 25px; 
+    height: 25px;
+    margin-right: 5px;
+    margin-left: -2px;
+}
+.myprofile:hover{
+    background: rgb(226, 233, 239);
+}
+
+.sub-menu-wrap{
+    position: absolute;       /*above table*/
+    right:0%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    cursor:default;
+    z-index: 2;             /*above */
+}
+ .sub-menu-wrap.open-menu{
+    max-height: 400px;
+
+} 
+.sub-menu{
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    box-shadow:-3px -3px 7px grey,
+    3px 3px 5px black;
+    border-radius: 15px;
+}
+#name{
+    font-size: 25px;
+    text-align: center;
+}
+.sub-menu hr{
+    background: black;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0 10px;
+}
+.sub-menu h2{
+    text-align: center;
+}
+
+#oneline{
+    padding: 4px;
+    
+}
+
+#updatemyprofile{
+    width: 100%;
+    margin-top: 10px;
+    height:30px;   
+    font-size: 15px;
+    border-radius: 5px;
+    background: white;
+    border:none;
+    border-radius: 50px;
+    box-shadow: -3px -3px 7px rgb(132, 125, 125),
+     3px 3px 5px rgb(62, 53, 53);
+}
+#updatemyprofile:hover{
+    width: 100%;
+    margin-top: 10px;
+    height:30px;  
+    font-size: 17px;
+    border-radius: 5px;
+    background: rgb(201, 236, 245);
+    border:none;
+    border-radius: 50px;
+    box-shadow: inset -2px -2px 5px rgb(56, 55, 55),
+    inset 2px 2px 3px rgb(32, 28, 28);    
+}
+
+#updatemyprofile:hover{
+    width: 100%;
+    margin-top: 10px;
+    height:30px;    
+    font-size: 17px;
+    border-radius: 5px;
+    background: rgb(201, 236, 245);
+    border:none;
+    border-radius: 50px;
+    box-shadow: inset -2px -2px 5px rgb(56, 55, 55),
+    inset 2px 2px 3px rgb(32, 28, 28);   
+}
+.main1{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+  }
+ 
+  .main-skills{
+    display: flex;
+    margin-top: 20px;
+  }
+  .main-skills .card{
+    width: 21%;
+    height:130px;
+    margin: 10px;
+    background:linear-gradient( rgb(103, 193, 229),rgb(240, 242, 242),  rgb(97, 190, 226));
+    border-radius: 50% /20%;
+    text-align: center;
+    padding: 10px;
+    box-shadow:inset -3px -3px 7px rgb(15, 15, 15),
+     3px 3px 5px rgb(0, 0, 0);
+    
+  }
+  .main-skills .card h3{
+    margin-top: 30px;
+    font-size: 50px;
+    margin-left:30px;  
+    text-transform: capitalize;
+    
+  }
+  .main-skills .card label{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0px;
+  }
+  .cardimg{
+    height: 70px;
+    width: 70px;
+    margin-top:20px;
+    margin-left: 30px;
+  }
+  #imgno{
+    display: flex;
+    color:#080808;  
+  }
+ 
+
+   

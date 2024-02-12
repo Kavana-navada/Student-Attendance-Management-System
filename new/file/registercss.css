@@ -1,0 +1,244 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url("Pictures/bg1.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+nav
+{
+    left:0%;
+    top:0%;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background:transparent;
+    box-sizing: border-box;
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+img{
+    height:75px;
+    width:75px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 1%;
+}
+ul{
+    color: rgb(236, 230, 230);
+    margin: 0%;
+    display:flex;
+    list-style:none;
+    
+    
+}
+span{
+    color: #070707;
+    margin-right:750px; 
+    font-size: 30px;
+    pointer-events: none;
+}
+ li a{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 20px;
+    font-weight: bold;
+    position: relative;
+    
+}
+li a:visited{
+    color:black;
+}
+li a:hover{
+    color: blue;
+}
+li a::after{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: -5px;
+    margin-left: 15px;
+    width: 70%;
+    height: 3px;
+    background-color:rgb(9, 9, 9);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform.5s;
+    
+
+}
+li a:hover::after{
+    transform:scaleX(1);
+   transform-origin: left;
+}
+.leaf{
+    height: 450px;               /*375*/
+    width: 400px;                    /*375*/
+    border-left-style:groove;
+    border-right-style:groove;
+    border-bottom-style: hidden;
+    border-top-style: hidden;
+    border-radius: 100px;
+    border-width: 10px;
+    border-inline-color: rgb(29, 68, 225);
+    margin-left:500px;
+    background:linear-gradient(rgb(166, 238, 21),rgb(123, 222, 230));
+   
+    margin-top: 50px; 
+    margin:200px ;
+    
+    
+}
+.middle form{
+    width: 100%;
+    padding: 0 50px;
+}
+
+h2{
+    font-size: 1.75em;
+    color: rgb(85, 10, 236);
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(217, 209, 214);
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+.input-box{
+    position: relative;
+    margin: 22px 0 ;                                              /*10px 0*/
+
+}
+.input-box{
+        
+    border:none;
+    border-style: none;
+    border-radius: 30px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.2),
+                        5px 5px 15px rgba(0,0,0,0.5),
+                        inset -5px -5px 5px rgba(255,255,255,0.2),
+                        inset 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.input-box input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+        border: 2px transparent;
+    border-radius: 30px;
+    outline: none;
+    transition: 0.5s ease;
+    font-size:medium;
+    color: rgb(3, 3, 3);
+    padding: 0 15px;
+
+}   
+
+.input-box label{
+    color: white;
+    position:absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: medium;
+    pointer-events: none;
+    transition: 0.3s ease;
+    font-weight: bold;
+
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:1px;
+    font-size: small;
+    background-color:white;
+    border-radius: 10px;
+    padding: 0 8px;
+    color: black;
+    
+}
+
+
+
+.input-box input:focus,
+.input-box input:valid{
+    border-color:white;
+}
+
+#strength
+{
+    color: red;
+    font-size: 11px;
+    position:absolute;
+    bottom: -13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    left: 90px;
+    width: 200px;
+    
+    
+}
+
+
+.btn
+{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background-color: rgb(40, 21, 213);
+    font-size:large;
+    color: black;
+    font-weight: 600;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.2),
+    5px 5px 15px rgba(0,0,0,0.5),
+    inset -5px -5px 5px rgba(15, 14, 14, 0.1),
+    inset 5px 5px 5px rgba(0,0,0,0.1);
+   
+}
+.btn:hover{
+    border-color: white;
+    border:2px solid white;
+    color: white;
+    cursor:pointer;
+   
+   
+    
+}
+.login {
+    text-align: center;
+    margin: 5px 0 10px;
+}
+.login a{
+    
+    font-size:15px;
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+    font-weight: 600;
+}
+.login a:hover{
+    text-decoration: underline;
+    color: rgb(33, 67, 202);
+}
+.login label{
+    color: rgb(2, 2, 2);
+    padding-right: 10px;
+    font-size:15px;
+}

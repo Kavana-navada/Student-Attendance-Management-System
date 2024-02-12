@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <link rel="stylesheet" type="text/css" href="mylogincss.css">
+    </head>
+    <body>
+        <div class="container">
+        
+            <nav id="navigationbar">
+                <img src="Pictures/clglogo.jpg"> 
+                
+                <ul>
+                    <li><span>Bhandakars' Arts and Science College</span></li>
+                    <li><a href="newhome.html">home</a></li>                   
+                </ul>                            
+            </nav>
+            <div class="leaf">
+            <div class="middle">    <!--login-box-->
+                
+                <h2 style="padding-top: 40px;"><b>ADMIN LOGIN</b></h2>
+                    <form action="loginphp.php" method="POST">
+
+                    <div class="input-box">
+                        <input type="number" id="code" name="code" maxlength="10" required >
+                        <label for="ACode">Admin Code</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="email" id="email" name="email" maxlength="30" required >
+                        <label for="username">Email</label>
+                    </div>
+
+                    <div class="input-box"> 
+                        <input type="password"  id="password" name="password" maxlength="15" required >
+                        <label for="password">Password</label>
+                    </div>
+
+                    <div class="forgotpass">
+                        <a class="link1" id="link1" href="adminchangepass.html">forgot password?</a>
+                    </div>
+
+                    
+                   <button type="submit" class="btn" value="login" name="login">Login</button><br>
+
+                    <div class="register">
+                         <label for="notuser" id="notuser">Not an user?</label><a class="link2" id="link2" href="register.html">Register</a>
+                    </div>
+                 </div>
+                 
+                </form>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Staff Register</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <script type="text/javascript">
+        function passwordstrength() {
+            var pass = document.getElementById("password");
+            var str = document.getElementById("strength");
+
+            let alpha = /[a-zA-z]/;
+            let upper = /[A-Z]/;
+            let num = /[0-9]/;
+            let spcl = /[!,@,#,$,%,^,&,*,),(,?,~,_,+,{,|,-,=,},<,>,.]/;
+
+
+            if (pass.value.length < 4) {
+                str.innerHTML = "password is weak";
+                str.style.color = "red";
+                pass.setCustomValidity("password must contain 8 character");
+
+            }
+            else if (pass.value.length < 8) {
+                str.innerHTML = "password is medium";
+                str.style.color = "yellow";
+                pass.setCustomValidity("password must contain 8 character");
+                if (!(pass.value.match(num))) {
+                    pass.setCustomValidity("must contain atleast one digit");
+                }
+                if (!(pass.value.match(spcl))) {
+                    pass.setCustomValidity("must contain atleast one special character");
+                }
+                if (!(pass.value.match(upper))) {
+                    pass.setCustomValidity("must contain atleast one uppercase charater");
+                }
+            }
+            else if (pass.value.length >= 8 && pass.value.match(alpha) && pass.value.match(upper) && pass.value.match(num) && pass.value.match(spcl)) {
+                str.innerHTML = "password is strong";
+                str.style.color = "green";
+
+                pass.setCustomValidity("");
+            }
+
+
+        }
+        function passcheck() {
+            var pass = document.getElementById("password");
+            var conpass = document.getElementById("confirmpass");
+            if (pass.value != conpass.value) {
+                conpass.setCustomValidity("password mismatched");
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav id="navigationbar">
+            <img src="pic/clglogo.jpg" id="logo">
+            <ul>
+                <li><span>Bhandakars' Arts ans Science College</span></li>
+                <li><a href="mylogin.html">Back</a></li>
+            </ul>
+        </nav>
+        <div class="leaf">
+            <div class="middle"> <!--login-box-->
+                <h2><b>Register</b></h2>
+                <form action="staffregister.php" method="POST">
+
+                    <div class="input-box">
+                        <input type="text" id="firstname" name="firstname" maxlength="15" placeholder="First Name"
+                            required>&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="lastname" name="lastname" maxlength="15" placeholder="last Name"
+                            required>
+
+                    </div>
+                    <div class="input-box">
+                        <input type="number" id="staffid" name="staffid" maxlength="15" placeholder="Teacher Id"
+                            required>&nbsp;&nbsp;&nbsp;
+                            <input type="number" id="contact" name="contact" min="0000000000" max="999999999"
+                            placeholder="Contact Number" required>
+
+                    </div>
+                    <div class="input-box">
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male" id="lmale">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="female" name="gender" value="Femal">
+                        <label for="female"
+                            id="lfemale">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="trans" name="gender" value="Trans">
+                        <label for="trans" id="ltrans">Transgender</label>
+                    </div>
+                    <div class="input-box">
+                        <select name="quali" id="quali" aria-placeholder="Select Qualification" required>
+                            <option value="mcom">Mcom</option>
+                            <option value="MA">MA</option>
+                            <option value="MCA">MCA</option>
+                            <option value="MSC">MSC </option>
+                            <option value="MBA">MBA</option>
+                        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select name="dept" id="dept" aria-placeholder="Select Department" required>
+                            <option value="commerce">Commerce</option>
+                            <option value="arts">Arts</option>
+                            <option value="compscience">Computer Science</option>
+                            <option value="botony">Botany </option>
+                            <option value="politicalsci">Political Science</option>
+                            <option value="physics">Physics</option>
+                            <option value="chemestry">Chemistry</option>
+                            <option value="maths">Mathematics</option>
+                            <option value="economics">Economics</option>
+                            <option value="psychology">Psychology</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="sanskrit">Sanskrit</option>
+                            <option value="kannada">Kannada</option>
+                            <option value="journalism">Journalism</option>
+                            <option value="history">History</option>
+                        </select>
+
+                    </div>
+                     <div class="input-box">
+                        <input type="email" id="email" name="email" maxlength="30" placeholder="Email Id" required>
+                        <input type="password" id="password" name="password" maxlength="15" placeholder="Password" required>
+                    </div>
+                    <div class="input-box">
+                        <textarea id="add" name="add" placeholder="Address" required></textarea>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    </div>
+                    <button type="submit" class="btn" value="register" name="register">Register</button><br>
+
+                    <div class="login">
+                        <label for="alreadyuser" id="alreadyuser">Already registerd?</label><a class="link1" id="link1"
+                            href="mylogin.html">Login</a>
+                    </div>
+            </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
